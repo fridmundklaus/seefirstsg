@@ -51,8 +51,8 @@ server.get('/news', function (req, res) {
         } else {
             responseToSend = {
                 "messages": [
-                    { "text": `Opps! Looks like I don't have any articles on ${query} as of now.` },
-                    { "text": "Please feel free to check back later or try searching for another topic." }
+                    { "text": `Aiyoh! Looks like I don't have any articles on ${query} as of now.` },
+                    { "text": "Please check back later or try searching for another topic." }
                 ]
             }
             return res.json(responseToSend);
@@ -60,7 +60,7 @@ server.get('/news', function (req, res) {
     }, (error) => {
         responseToSend = {
             "messages": [
-                { "text": `Opps! Something went wrong while searching for articles on ${query}.` },
+                { "text": `Aiyoh! Something went wrong while searching for articles on ${query}.` },
                 { "text": `Got this error: ${error}` }
             ]
         }
